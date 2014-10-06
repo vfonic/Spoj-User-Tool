@@ -51,7 +51,11 @@ $(document).ready(function() {
 		var val1 = parseFloat($tag1.text());
 		var val2 = parseFloat($tag2.text());
 		if(!isNaN(val1) && !isNaN(val2)){
-			if(val1<val2){
+			if(val1==val2){
+				$tag1.attr('class', 'better');
+				$tag2.attr('class', 'better');
+			}
+			else if(val1<val2){
 				$tag1.attr('class', 'better');
 				$tag2.attr('class', 'notbetter');
 			}
